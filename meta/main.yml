@@ -1,0 +1,5 @@
+---
+galaxy_info:
+  role_name: qemu-guest-agent
+  author: Vlad Ghinea
+  license: Apache v2
