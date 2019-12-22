@@ -1,0 +1,10 @@
+---
+- name: Restart Qemu Guest Agent
+  service:
+    name: "{{ qemu_guest_agent_service_name }}"
+    state: restarted
+
+- name: Enable Qemu Guest Agent
+  service:
+    name: "{{ qemu_guest_agent_service_name }}"
+    enabled: yes

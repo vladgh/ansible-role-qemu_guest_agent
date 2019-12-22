@@ -1,0 +1,3 @@
+---
+# Set to false to disable Qemu Guest Agent
+qemu_guest_agent_enabled: true
