@@ -9,9 +9,9 @@
 
 - name: Qemu Guest Agent
   package:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: present
-  with_items: '{{ qemu_guest_agent_package }}'
+  with_items: "{{ qemu_guest_agent_package }}"
   when: ansible_system_vendor == 'QEMU'
   notify:
     - Restart Qemu Guest Agent
