@@ -1,6 +1,6 @@
 # Ansible Role: QEMU Guest Agent
 
-![Build Status](https://github.com/vladgh/ansible-role-qemu-guest-agent/workflows/CI/badge.svg)
+![Build Status](https://github.com/vladgh/ansible-role-qemu_guest_agent/workflows/CI/badge.svg)
 
 Vlad's Ansible Role for QEMU Guest Agent.
 
@@ -24,7 +24,7 @@ Available variables are listed below, along with default values (see defaults/ma
 - hosts: all
   become: yes
   roles:
-      - vladgh.qemu-guest-agent
+      - vladgh.qemu_guest_agent
 ```
 
 ## Contribute

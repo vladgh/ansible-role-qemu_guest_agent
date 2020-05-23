@@ -4,4 +4,4 @@
   tasks:
     - name: Include role
       include_role:
-        name: vladgh.qemu-guest-agent
+        name: vladgh.qemu_guest_agent

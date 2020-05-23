@@ -20,13 +20,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        path: vladgh.qemu-guest-agent
+        path: vladgh.qemu_guest_agent
     - name: Set up Python
       uses: actions/setup-python@v2
     - name: Install dependencies
       run: pip install molecule docker ansible-lint yamllint
     - name: Test
-      run: cd vladgh.qemu-guest-agent && molecule test
+      run: cd vladgh.qemu_guest_agent && molecule test
       env:
         MOLECULE_DISTRO: "${{ matrix.os }}"
   deploy:
@@ -40,4 +40,4 @@ jobs:
     - name: Install dependencies
       run: pip install ansible
     - name: Deploy
-      run: ansible-galaxy role import --role-name qemu-guest-agent --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} vladgh ansible-role-qemu-guest-agent
+      run: ansible-galaxy role import --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} vladgh ansible-role-qemu_guest_agent
