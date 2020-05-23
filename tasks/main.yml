@@ -1,19 +1,9 @@
 ---
-- name: Include OS specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - "{{ ansible_os_family }}.yml"
-  tags: vars
-
-- name: Qemu Guest Agent
+- name: QEMU Guest Agent
   package:
-    name: "{{ item }}"
+    name: qemu-guest-agent
     state: present
-  with_items: "{{ qemu_guest_agent_package }}"
   when: ansible_system_vendor == 'QEMU'
   notify:
-    - Restart Qemu Guest Agent
-    - Enable Qemu Guest Agent
-  tags: packages
+    - Restart QEMU Guest Agent
+    - Enable QEMU Guest Agent
