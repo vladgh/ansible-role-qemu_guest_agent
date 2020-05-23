@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: qemu-guest-agent
   description: Vlad's role for the QEMU Guest Agent
   author: Vlad Ghinea
   license: Apache v2
